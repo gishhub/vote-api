@@ -19,8 +19,8 @@ object index extends BaseScalaTemplate[play.api.templates.Html,Format[play.api.t
     def apply():play.api.templates.Html = {
         _display_ {
 
-Seq[Any](_display_(Seq[Any](/*1.2*/main("新規の質問登録")/*1.17*/ {_display_(Seq[Any](format.raw/*1.19*/("""
-<form action="questions/post" method="get">
+Seq[Any](_display_(Seq[Any](/*1.2*/main("質問投稿")/*1.14*/ {_display_(Seq[Any](format.raw/*1.16*/("""
+<form action="questions/post" method="put">
 	title:<input type="text" name="title"><br>
 	text:<input type="text" name="text"><br>
 	choice1:<input type="text" name="choice1"><br>
@@ -44,10 +44,10 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("新規の質問登録")/*1.17*/ {_displ
 }
                 /*
                     -- GENERATED --
-                    DATE: Sun Mar 24 04:03:06 JST 2013
+                    DATE: Sun Mar 24 18:21:34 JST 2013
                     SOURCE: /Users/takadayuichi/work/vote-api/app/views/index.scala.html
-                    HASH: 08e9ae4d0511778f1f28a78da13191e0e1c333a3
-                    MATRIX: 578->1|601->16|640->18
+                    HASH: 87b285cb203464c50bfd70f4541bbf013d4459a6
+                    MATRIX: 578->1|598->13|637->15
                     LINES: 22->1|22->1|22->1
                     -- GENERATED --
                 */

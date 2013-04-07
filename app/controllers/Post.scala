@@ -4,22 +4,9 @@ import play.api._
 import play.api.mvc._
 import play.api.data.Form
 import play.api.data.Forms._
-import models.Question
 import com.mongodb.casbah.Imports._
 
 object Post extends Controller {
-
-  // フォームの値をQuestionクラスにマッピング
-  val questionForm = Form(mapping(
-    "title" -> text,
-    "text" -> text,
-    "choice1" -> text,
-    "choice2" -> text,
-    "choice3" -> text,
-    "choice4" -> text,
-    "choice5" -> text,
-    "username" -> text,
-    "password" -> text)(Question.apply)(Question.unapply))
 
   // MongoDB接続設定
   val conn = MongoConnection("mongo-takadayuichi-db-0.azva.dotcloud.net", 51406)
@@ -28,20 +15,30 @@ object Post extends Controller {
   val collection = db("test")
 
   // リクエスト処理
-  def post = Action { implicit request =>
-    val question = MongoDBObject(
-        "title" -> questionForm.bindFromRequest.get.title,
-        "text" -> questionForm.bindFromRequest.get.text,
-        "choice1" -> questionForm.bindFromRequest.get.choice1,
-        "choice2" -> questionForm.bindFromRequest.get.choice2,
-        "choice3" -> questionForm.bindFromRequest.get.choice3,
-        "choice4" -> questionForm.bindFromRequest.get.choice4,
-        "choice5" -> questionForm.bindFromRequest.get.choice5,
-        "username" -> questionForm.bindFromRequest.get.username,
-        "password" -> questionForm.bindFromRequest.get.password)
+  def post = Action { request =>
+    request.body.asJson.map { json =>
+      // ログ
+      println("リクエスト" + json)
 
-    // mongodbへインサート
-    collection += question
-    Ok(question.toString)
+      // ビルダーで順次項目をobjectに追加
+      val builder = MongoDBObject.newBuilder
+      (json \ "title").asOpt[String].map { title => builder += "title" -> title }
+      (json \ "text").asOpt[String].map { text => builder += "text" -> text }
+      (json \ "choice1").asOpt[String].map { choice1 => builder += "choice1" -> choice1 }
+      (json \ "choice2").asOpt[String].map { choice2 => builder += "choice2" -> choice2 }
+      (json \ "choice3").asOpt[String].map { choice3 => builder += "choice3" -> choice3 }
+      (json \ "choice4").asOpt[String].map { choice4 => builder += "choice4" -> choice4 }
+      (json \ "choice5").asOpt[String].map { choice5 => builder += "choice5" -> choice5 }
+      (json \ "username").asOpt[String].map { username => builder += "username" -> username }
+      (json \ "password").asOpt[String].map { password => builder += "password" -> password }
+      val question = builder.result
+
+      // mongodbへインサート
+      collection += question
+
+      Ok(question.toString)
+    }.getOrElse {
+      BadRequest("Expecting Json data")
+    }
   }
 }

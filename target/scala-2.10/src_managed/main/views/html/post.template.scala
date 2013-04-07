@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sun Mar 24 04:03:06 JST 2013
+                    DATE: Sun Mar 24 18:21:35 JST 2013
                     SOURCE: /Users/takadayuichi/work/vote-api/app/views/post.scala.html
                     HASH: ff5f21c2983e35eeee0bf31c8faca97a7686396b
                     MATRIX: 504->1|598->18|656->42|684->49|746->77|774->84

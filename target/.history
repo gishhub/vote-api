@@ -63,3 +63,10 @@ clean
 eclipse with-source=true
 run 8099
 exit
+run 8099
+clean
+update
+reload
+run 8099
+exit
+run 8099
