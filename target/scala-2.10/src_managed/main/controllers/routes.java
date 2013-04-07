@@ -1,6 +1,6 @@
 // @SOURCE:/Users/takadayuichi/work/vote-api/conf/routes
-// @HASH:e343f55ef37ddfd1ddca17e4218d7b1a6b5f6d10
-// @DATE:Sun Apr 07 16:36:51 JST 2013
+// @HASH:8f84a3bb5473fb40652ed550a7d1ecef457dab75
+// @DATE:Sun Apr 07 18:58:27 JST 2013
 
 package controllers;
 

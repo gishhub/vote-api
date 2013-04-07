@@ -6,7 +6,6 @@
 GET     /                           controllers.Application.index
 PUT     /questions/post             controllers.Post.post
 GET     /questions/get              controllers.Get.get
-GET     /questions/getget           controllers.Get.getget
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

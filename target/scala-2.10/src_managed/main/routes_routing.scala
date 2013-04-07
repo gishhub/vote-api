@@ -1,6 +1,6 @@
 // @SOURCE:/Users/takadayuichi/work/vote-api/conf/routes
-// @HASH:e343f55ef37ddfd1ddca17e4218d7b1a6b5f6d10
-// @DATE:Sun Apr 07 16:36:51 JST 2013
+// @HASH:8f84a3bb5473fb40652ed550a7d1ecef457dab75
+// @DATE:Sun Apr 07 18:58:27 JST 2013
 
 
 import play.core._
@@ -40,14 +40,10 @@ private[this] lazy val controllers_Post_post1 = Route("PUT", PathPattern(List(St
 private[this] lazy val controllers_Get_get2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("questions/get"))))
         
 
-// @LINE:9
-private[this] lazy val controllers_Get_getget3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("questions/getget"))))
+// @LINE:11
+private[this] lazy val controllers_Assets_at3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+"""))))
         
-
-// @LINE:12
-private[this] lazy val controllers_Assets_at4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+"""))))
-        
-def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """questions/post""","""controllers.Post.post"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """questions/get""","""controllers.Get.get"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """questions/getget""","""controllers.Get.getget"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """questions/post""","""controllers.Post.post"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """questions/get""","""controllers.Get.get"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -79,16 +75,8 @@ case controllers_Get_get2(params) => {
 }
         
 
-// @LINE:9
-case controllers_Get_getget3(params) => {
-   call { 
-        invokeHandler(controllers.Get.getget, HandlerDef(this, "controllers.Get", "getget", Nil,"GET", """""", Routes.prefix + """questions/getget"""))
-   }
-}
-        
-
-// @LINE:12
-case controllers_Assets_at4(params) => {
+// @LINE:11
+case controllers_Assets_at3(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }

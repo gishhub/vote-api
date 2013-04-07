@@ -1,6 +1,6 @@
 // @SOURCE:/Users/takadayuichi/work/vote-api/conf/routes
-// @HASH:e343f55ef37ddfd1ddca17e4218d7b1a6b5f6d10
-// @DATE:Sun Apr 07 16:36:51 JST 2013
+// @HASH:8f84a3bb5473fb40652ed550a7d1ecef457dab75
+// @DATE:Sun Apr 07 18:58:27 JST 2013
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,8 +13,7 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:12
-// @LINE:9
+// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -33,16 +32,9 @@ def post(): Call = {
 }
                           
 
-// @LINE:9
 // @LINE:8
 class ReverseGet {
     
-
-// @LINE:9
-def getget(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "questions/getget")
-}
-                                                
 
 // @LINE:8
 def get(): Call = {
@@ -66,11 +58,11 @@ def index(): Call = {
 }
                           
 
-// @LINE:12
+// @LINE:11
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:11
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -82,8 +74,7 @@ def at(file:String): Call = {
                   
 
 
-// @LINE:12
-// @LINE:9
+// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -107,21 +98,9 @@ def post : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:9
 // @LINE:8
 class ReverseGet {
     
-
-// @LINE:9
-def getget : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Get.getget",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "questions/getget"})
-      }
-   """
-)
-                        
 
 // @LINE:8
 def get : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -155,11 +134,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:12
+// @LINE:11
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:11
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -176,8 +155,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:12
-// @LINE:9
+// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -196,16 +174,9 @@ def post(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:9
 // @LINE:8
 class ReverseGet {
     
-
-// @LINE:9
-def getget(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Get.getget(), HandlerDef(this, "controllers.Get", "getget", Seq(), "GET", """""", _prefix + """questions/getget""")
-)
-                      
 
 // @LINE:8
 def get(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -229,11 +200,11 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:12
+// @LINE:11
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:11
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )

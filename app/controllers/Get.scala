@@ -4,15 +4,9 @@ import play.api._
 import play.api.mvc._
 import play.api.data.Form
 import play.api.data.Forms._
-import play.api.libs.json._
-import play.api.libs.json.Json._
-import play.api.libs.json.Writes._
-import play.api.libs.json.Reads._
-import scala.collection.mutable._
 import scala.util.parsing.json._
 import scala.collection.immutable
 import com.mongodb.casbah.Imports._
-import models.Question
 
 object Get extends Controller {
 
@@ -28,22 +22,6 @@ object Get extends Controller {
 
   // リクエスト処理
   def get = Action { implicit request =>
-    val qid = form.bindFromRequest.get
-
-    // ログ
-    println("リクエスト" + qid)
-
-    // 取得条件を指定
-    val condition = MongoDBObject("_id" -> new ObjectId(qid))
-
-    // 取得
-    val obj = questionCollection.findOne(condition).get
-
-    Ok(obj.toString)
-  }
-
-  // テスト用
-  def getget = Action { implicit request =>
     val qid = form.bindFromRequest.get
 
     // ログ
@@ -86,7 +64,7 @@ object Get extends Controller {
     val choices = JSONArray(List(choice1,choice2,choice3,choice4,choice5))
 
     val m = JSONObject(immutable.Map(
-      "_id" -> question("_id"),
+      "_id" -> question("_id").toString,
       "title" -> question("title"),
       "text" -> question("text"),
       "choices" -> choices,
