@@ -30,7 +30,7 @@ object GetList extends Controller {
 
     val num = param.toInt
     var result = ""
-    var resultList = List.empty[String]
+    var resultList = List.empty[JSONObject]
 
     // 取得
     questionCollection.find().limit(num).foreach { rowObj =>
@@ -45,9 +45,12 @@ object GetList extends Controller {
         "text" -> text,
         "username" -> username))
 
-      resultList = m.toString() :: resultList
+      resultList = m :: resultList
     }
-    result = JSONArray(resultList).toString
-    Ok(result)
+    val posts = JSONArray(resultList)
+    val m = JSONObject(immutable.Map(
+      "posts" -> posts))
+
+    Ok(m.toString())
   }
 }
