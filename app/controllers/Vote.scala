@@ -47,12 +47,19 @@ object Vote extends Controller {
     val vote4 = voteCollection.count(MongoDBObject("qid" -> qid, "choice" -> 4))
     val vote5 = voteCollection.count(MongoDBObject("qid" -> qid, "choice" -> 5))
 
+    var voteVal1 = 0L
+    var voteVal2 = 0L
+    var voteVal3 = 0L
+    var voteVal4 = 0L
+    var voteVal5 = 0L
     val voteAll = vote1 + vote2 + vote3 + vote4 + vote5
-    val voteVal2 = vote2 * 100 / voteAll
-    val voteVal3 = vote3 * 100 / voteAll
-    val voteVal4 = vote4 * 100 / voteAll
-    val voteVal5 = vote5 * 100 / voteAll
-    val voteVal1 = 100 - voteVal2 - voteVal3 - voteVal4 - voteVal5
+    if (voteAll != 0) {
+      voteVal2 = vote2 * 100 / voteAll
+      voteVal3 = vote3 * 100 / voteAll
+      voteVal4 = vote4 * 100 / voteAll
+      voteVal5 = vote5 * 100 / voteAll
+      voteVal1 = 100 - voteVal2 - voteVal3 - voteVal4 - voteVal5
+    }
 
     val choiceString1 = question.get("choice1")
     val choiceString2 = question.get("choice2")
