@@ -35,7 +35,13 @@ object Get extends Controller {
     val vote3 = voteCollection.count(MongoDBObject("qid" -> qid, "choice" -> 3))
     val vote4 = voteCollection.count(MongoDBObject("qid" -> qid, "choice" -> 4))
     val vote5 = voteCollection.count(MongoDBObject("qid" -> qid, "choice" -> 5))
-    val voteAll = voteCollection.count()
+
+    val voteAll = vote1 + vote2 + vote3 + vote4 + vote5
+    val voteVal2 = vote2 * 100 / voteAll
+    val voteVal3 = vote3 * 100 / voteAll
+    val voteVal4 = vote4 * 100 / voteAll
+    val voteVal5 = vote5 * 100 / voteAll
+    val voteVal1 = 100 - voteVal2 - voteVal3 - voteVal4 - voteVal5
 
     val choiceString1 = question.get("choice1")
     val choiceString2 = question.get("choice2")
@@ -46,27 +52,27 @@ object Get extends Controller {
     val choice1 = JSONObject(immutable.Map(
       "id" -> 1,
       "choice" -> choiceString1,
-      "vote" -> vote1))
+      "vote" -> voteVal1))
 
     val choice2 = JSONObject(immutable.Map(
       "id" -> 2,
       "choice" -> choiceString2,
-      "vote" -> vote2))
+      "vote" -> voteVal2))
 
     val choice3 = JSONObject(immutable.Map(
       "id" -> 3,
       "choice" -> choiceString3,
-      "vote" -> vote3))
+      "vote" -> voteVal3))
 
     val choice4 = JSONObject(immutable.Map(
       "id" -> 4,
       "choice" -> choiceString4,
-      "vote" -> vote4))
+      "vote" -> voteVal4))
 
     val choice5 = JSONObject(immutable.Map(
       "id" -> 5,
       "choice" -> choiceString5,
-      "vote" -> vote5))
+      "vote" -> voteVal5))
 
     var choicesList = List(choice1, choice2)
     if (choiceString3 != "") { choicesList = List(choice1, choice2, choice3) }

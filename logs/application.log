@@ -1,146 +1,33 @@
-2013-04-13 13:10:21,431 - [INFO] - from play in main 
+2013-04-21 13:35:02,284 - [INFO] - from play in main 
 Listening for HTTP on /0.0.0.0:8099
 
-2013-04-13 13:11:26,235 - [INFO] - from play in New I/O  worker #1 
+2013-04-21 13:35:58,265 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-13 13:56:44,593 - [INFO] - from play in New I/O  worker #4 
+2013-04-21 13:39:04,421 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-13 14:02:20,998 - [INFO] - from play in New I/O  worker #1 
+2013-04-21 13:40:01,101 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-13 14:07:18,690 - [INFO] - from play in New I/O  worker #1 
+2013-04-21 13:41:32,477 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-13 15:09:20,681 - [INFO] - from play in New I/O  worker #4 
+2013-04-21 13:43:10,723 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-13 15:09:23,607 - [ERROR] - from application in play-internal-execution-context-2 
-
-
-! @6e19lajf7 - Internal server error, for (GET) [/questions/get/recent?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[Exception: type mismatch]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.lang.Exception: type mismatch
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1$$anonfun$2.apply(GetList.scala:37) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1$$anonfun$2.apply(GetList.scala:37) ~[na:na]
-	at scala.Option.orElse(Option.scala:257) ~[scala-library.jar:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1.apply(GetList.scala:37) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1.apply(GetList.scala:35) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getRecent$1.apply(GetList.scala:35) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-13 15:12:01,450 - [INFO] - from play in New I/O  worker #4 
+2013-04-21 14:12:31,495 - [INFO] - from play in New I/O  worker #2 
 Application started (Dev)
 
-2013-04-13 15:12:04,043 - [ERROR] - from application in play-internal-execution-context-2 
-
-
-! @6e19ljmp0 - Internal server error, for (GET) [/questions/get/recent?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[Exception: type mismatch]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.lang.Exception: type mismatch
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1$$anonfun$2.apply(GetList.scala:38) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1$$anonfun$2.apply(GetList.scala:38) ~[na:na]
-	at scala.Option.orElse(Option.scala:257) ~[scala-library.jar:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1.apply(GetList.scala:38) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1$$anonfun$apply$1.apply(GetList.scala:35) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getRecent$1.apply(GetList.scala:35) ~[na:na]
-	at controllers.GetList$$anonfun$getRecent$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-13 15:13:25,120 - [INFO] - from play in New I/O  worker #4 
+2013-04-21 14:14:47,331 - [INFO] - from play in New I/O  worker #2 
 Application started (Dev)
 
-2013-04-13 15:14:09,608 - [INFO] - from play in New I/O  worker #4 
+2013-04-21 14:18:09,159 - [INFO] - from play in New I/O  worker #2 
 Application started (Dev)
 
-2013-04-13 15:23:55,827 - [INFO] - from play in New I/O  worker #1 
+2013-04-21 14:23:37,090 - [INFO] - from play in New I/O  worker #3 
 Application started (Dev)
 
-2013-04-13 15:24:37,320 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-13 15:25:34,304 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-13 15:26:18,615 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-13 15:29:08,070 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-13 15:40:18,541 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-13 15:41:18,064 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-13 15:51:14,502 - [INFO] - from play in New I/O  worker #3 
-Application started (Dev)
-
-2013-04-13 15:52:37,559 - [INFO] - from play in New I/O  worker #3 
+2013-04-21 14:25:31,687 - [INFO] - from play in New I/O  worker #3 
 Application started (Dev)
 

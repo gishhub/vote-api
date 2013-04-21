@@ -4,7 +4,7 @@
 		module="vote-api_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20130324181111"
+		publication="20130421133457"
 	>
 		<description>
 		vote-api
