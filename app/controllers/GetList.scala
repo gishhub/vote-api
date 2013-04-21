@@ -33,7 +33,7 @@ object GetList extends Controller {
     var resultList = List.empty[JSONObject]
 
     // 取得
-    questionCollection.find().limit(num).foreach { rowObj =>
+    /*questionCollection.find(MongoDBObject()).limit(num).foreach { rowObj =>
       val _id: Option[String] = rowObj.getAs[String]("_id")
       val title: Option[String] = rowObj.getAs[String]("title")
       val text: Option[String] = rowObj.getAs[String]("text")
@@ -47,10 +47,30 @@ object GetList extends Controller {
 
       resultList = m :: resultList
     }
+      */
+
+    questionCollection.find(MongoDBObject()).limit(num).foreach { question =>
+      val _id = question("_id").toString
+      var title = question.get("title")
+      if (title == null){ title = "" }
+      var text = question.get("text")
+      if (text == null){ text = "" }
+      var username = question.get("username")
+      if (username == null){ username = "" }
+
+      val m = JSONObject(immutable.Map(
+        "_id" -> _id,
+        "title" -> title,
+        "text" -> text,
+        "username" -> username))
+
+      resultList = m :: resultList
+    }
+
     val posts = JSONArray(resultList)
-    val m = JSONObject(immutable.Map(
+    val json = JSONObject(immutable.Map(
       "posts" -> posts))
 
-    Ok(m.toString())
+    Ok(json.toString())
   }
 }
