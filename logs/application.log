@@ -1,13 +1,13 @@
-2013-04-21 15:13:40,010 - [INFO] - from play in main 
+2013-05-04 18:01:42,674 - [INFO] - from play in main 
 Listening for HTTP on /0.0.0.0:8099
 
-2013-04-21 15:13:57,139 - [INFO] - from play in New I/O  worker #1 
+2013-05-04 18:01:51,309 - [INFO] - from play in New I/O  worker #1 
 Application started (Dev)
 
-2013-04-21 15:13:59,928 - [ERROR] - from application in play-internal-execution-context-1 
+2013-05-04 18:01:52,130 - [ERROR] - from application in play-internal-execution-context-2 
 
 
-! @6e3g0elf7 - Internal server error, for (GET) [/questions/get/list?num=10] ->
+! @6e77ad5jf - Internal server error, for (GET) [/questions/get?qid=5184ca8fecd96457d22079e6] ->
 
 play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
@@ -19,9 +19,9 @@ play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_45]
+	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_45]
 java.lang.NullPointerException: null
 	at scala.util.parsing.json.JSONFormat$$anonfun$1.apply(Parser.scala:59) ~[scala-library.jar:na]
 	at scala.util.parsing.json.JSONFormat$$anonfun$1.apply(Parser.scala:55) ~[scala-library.jar:na]
@@ -29,7 +29,7 @@ java.lang.NullPointerException: null
 	at scala.util.parsing.json.JSONObject$$anonfun$toString$1.apply(Parser.scala:96) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.immutable.Map$Map4.foreach(Map.scala:181) ~[scala-library.jar:na]
+	at scala.collection.immutable.Map$Map3.foreach(Map.scala:154) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.AbstractTraversable.map(Traversable.scala:105) ~[scala-library.jar:na]
 	at scala.util.parsing.json.JSONObject.toString(Parser.scala:96) ~[scala-library.jar:na]
@@ -47,13 +47,15 @@ java.lang.NullPointerException: null
 	at scala.util.parsing.json.JSONObject$$anonfun$toString$1.apply(Parser.scala:96) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.immutable.Map$Map1.foreach(Map.scala:109) ~[scala-library.jar:na]
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:224) ~[scala-library.jar:na]
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:403) ~[scala-library.jar:na]
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:403) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.AbstractTraversable.map(Traversable.scala:105) ~[scala-library.jar:na]
 	at scala.util.parsing.json.JSONObject.toString(Parser.scala:96) ~[scala-library.jar:na]
 	at scala.util.parsing.json.JSONType.toString(Parser.scala:33) ~[scala-library.jar:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:70) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:25) ~[na:na]
+	at controllers.Get$$anonfun$get$1.apply(Get.scala:99) ~[na:na]
+	at controllers.Get$$anonfun$get$1.apply(Get.scala:25) ~[na:na]
 	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
 	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
 	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
@@ -71,226 +73,4 @@ java.lang.NullPointerException: null
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-21 15:15:19,380 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-21 15:15:21,269 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6e3g0jbo1 - Internal server error, for (GET) [/questions/get/list?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.lang.NullPointerException: null
-	at scala.util.parsing.json.JSONFormat$$anonfun$1.apply(Parser.scala:59) ~[scala-library.jar:na]
-	at scala.util.parsing.json.JSONFormat$$anonfun$1.apply(Parser.scala:55) ~[scala-library.jar:na]
-	at scala.util.parsing.json.JSONObject$$anonfun$toString$1.apply(Parser.scala:96) ~[scala-library.jar:na]
-	at scala.util.parsing.json.JSONObject$$anonfun$toString$1.apply(Parser.scala:96) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.immutable.Map$Map4.foreach(Map.scala:181) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.AbstractTraversable.map(Traversable.scala:105) ~[scala-library.jar:na]
-	at scala.util.parsing.json.JSONObject.toString(Parser.scala:96) ~[scala-library.jar:na]
-	at scala.util.parsing.json.JSONType.toString(Parser.scala:33) ~[scala-library.jar:na]
-	at java.lang.String.valueOf(String.java:2826) ~[na:1.6.0_43]
-	at scala.collection.mutable.StringBuilder.append(StringBuilder.scala:197) ~[scala-library.jar:na]
-	at scala.collection.TraversableOnce$$anonfun$addString$1.apply(TraversableOnce.scala:308) ~[scala-library.jar:na]
-	at scala.collection.immutable.List.foreach(List.scala:309) ~[scala-library.jar:na]
-	at scala.collection.TraversableOnce$class.addString(TraversableOnce.scala:306) ~[scala-library.jar:na]
-	at scala.collection.AbstractTraversable.addString(Traversable.scala:105) ~[scala-library.jar:na]
-	at scala.collection.TraversableOnce$class.mkString(TraversableOnce.scala:272) ~[scala-library.jar:na]
-	at scala.collection.AbstractTraversable.mkString(Traversable.scala:105) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.toString(TraversableLike.scala:639) ~[scala-library.jar:na]
-	at scala.collection.SeqLike$class.toString(SeqLike.scala:642) ~[scala-library.jar:na]
-	at scala.collection.AbstractSeq.toString(Seq.scala:40) ~[scala-library.jar:na]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:65) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:52) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:52) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-21 15:16:28,582 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-21 15:16:30,116 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6e3g0n9k0 - Internal server error, for (GET) [/questions/get/list?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.lang.NullPointerException: null
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:59) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:52) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:52) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-21 15:17:11,829 - [INFO] - from play in New I/O  worker #1 
-Application started (Dev)
-
-2013-04-21 15:17:13,693 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6e3g0pm60 - Internal server error, for (GET) [/questions/get/list?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.lang.NullPointerException: null
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:60) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:52) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:52) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-21 15:24:22,066 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-21 15:27:20,374 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-21 15:27:21,928 - [ERROR] - from application in play-internal-execution-context-1 
-
-
-! @6e3g28bph - Internal server error, for (GET) [/questions/get/list?num=10] ->
-
-play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: title]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.0]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:314) [play_2.10.jar:2.1.0]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$12$$anonfun$apply$24.apply(PlayDefaultUpstreamHandler.scala:312) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.0]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
-	at java.lang.Thread.run(Thread.java:680) [na:1.6.0_43]
-java.util.NoSuchElementException: key not found: title
-	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library.jar:na]
-	at com.mongodb.casbah.commons.MongoDBObject.default(MongoDBObject.scala:47) ~[casbah-commons_2.10-2.5.0.jar:2.5.0]
-	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library.jar:na]
-	at com.mongodb.casbah.commons.MongoDBObject.apply(MongoDBObject.scala:47) ~[casbah-commons_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:54) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1$$anonfun$apply$1.apply(GetList.scala:52) ~[na:na]
-	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library.jar:na]
-	at com.mongodb.casbah.MongoCursor.foreach(MongoCursor.scala:496) ~[casbah-core_2.10-2.5.0.jar:2.5.0]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:52) ~[na:na]
-	at controllers.GetList$$anonfun$getList$1.apply(GetList.scala:25) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:217) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:109) ~[play_2.10.jar:2.1.0]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:108) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:106) ~[play_2.10.jar:2.1.0]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$2.apply(Action.scala:99) ~[play_2.10.jar:2.1.0]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:137) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1417) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-04-21 15:27:51,166 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-21 15:30:26,102 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
-
-2013-04-21 15:31:19,979 - [INFO] - from play in New I/O  worker #2 
-Application started (Dev)
 

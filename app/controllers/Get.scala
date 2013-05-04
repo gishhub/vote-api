@@ -15,11 +15,11 @@ object Get extends Controller {
   val form = Form("qid" -> text)
 
   // MongoDB接続設定
-  val conn = MongoConnection("mongo-takadayuichi-db-0.azva.dotcloud.net", 51406)
+  val conn = MongoConnection("gish.tokyo.jp", 27017)
   val db = conn("vote")
   db.authenticate("vote", "kein1980")
-  val questionCollection = db("test")
-  val voteCollection = db("vote_test")
+  val questionCollection = db("question")
+  val voteCollection = db("vote")
 
   // リクエスト処理
   def get = Action { implicit request =>

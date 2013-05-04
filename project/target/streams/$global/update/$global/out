@@ -12867,7 +12867,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cache;0.12.2!cache.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.12.2!test-agent.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10603ms :: artifacts dl 180ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10136ms :: artifacts dl 187ms[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 61[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-plugin;2.1.0 / Number of dependencies = 18[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : play#sbt-link;2.1.0 / Number of dependencies = 1[0m
@@ -15052,5 +15052,5 @@
 [0m[[0mdebug[0m] [0m	report for default#default-57f1cf;0.1-SNAPSHOT docs produced in /Users/takadayuichi/work/vote-api/project/target/resolution-cache/reports/default-default-57f1cf/docs-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
 [0m[[0mdebug[0m] [0m	report for default#default-57f1cf;0.1-SNAPSHOT pom produced in /Users/takadayuichi/work/vote-api/project/target/resolution-cache/reports/default-default-57f1cf/pom-resolved.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (10603ms resolve - 180ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10136ms resolve - 187ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
