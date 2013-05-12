@@ -80,3 +80,15 @@ run 8099
 exit
 run 8099
 exit
+run 8099
+exit
+run 8099
+exit
+run 8099
+exit
+run 8099
+exit
+eclipse with-source=true
+clean
+exit
+clean

@@ -9,7 +9,7 @@
 		extra-scalaVersion="2.9.2"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130504175247"/>
+		date="20130512143019"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.12.2" status="release" pubdate="20130116104518" resolver="local" artresolver="local" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
@@ -114,7 +114,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-tools.testing" name="test-interface">
-			<revision name="0.5" status="release" pubdate="20100327123658" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="36">
+			<revision name="0.5" status="release" pubdate="20100328103658" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="36">
 				<metadata-artifact status="no" details="" size="2199" time="0" location="/usr/local/play/framework/../repository/cache/org.scala-tools.testing/test-interface/ivy-0.5.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/org.scala-tools.testing/test-interface/0.5/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="testing" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="0.12.2"/>
 				<caller organisation="org.scala-sbt" name="test-agent" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="0.12.2"/>
@@ -207,7 +207,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-httpclient" name="commons-httpclient">
-			<revision name="3.1" status="release" pubdate="20120823211527" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/httpcomponents/httpclient-3.x/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="26">
+			<revision name="3.1" status="release" pubdate="20120824181527" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/httpcomponents/httpclient-3.x/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="26">
 				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3142" time="0" location="/usr/local/play/framework/../repository/cache/commons-httpclient/commons-httpclient/ivy-3.1.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/commons-httpclient/commons-httpclient/3.1/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.12.2"/>
@@ -219,7 +219,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
-			<revision name="1.2" status="release" pubdate="20120823211527" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="28">
+			<revision name="1.2" status="release" pubdate="20120824181527" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="28">
 				<metadata-artifact status="no" details="" size="2527" time="0" location="/usr/local/play/framework/../repository/cache/commons-codec/commons-codec/ivy-1.2.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/commons-codec/commons-codec/1.2/ivys/ivy.xml"/>
 				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="3.1"/>
 				<artifacts>
@@ -230,7 +230,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.0.4" status="release" pubdate="20120823211527" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/commons/logging/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="27">
+			<revision name="1.0.4" status="release" pubdate="20120824181527" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/commons/logging/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="27">
 				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2980" time="0" location="/usr/local/play/framework/../repository/cache/commons-logging/commons-logging/ivy-1.0.4.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/commons-logging/commons-logging/1.0.4/ivys/ivy.xml"/>
 				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="3.1"/>
@@ -242,7 +242,7 @@
 			</revision>
 		</module>
 		<module organisation="com.jcraft" name="jsch">
-			<revision name="0.1.46" status="release" pubdate="20120202013927" resolver="local" artresolver="local" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="25">
+			<revision name="0.1.46" status="release" pubdate="20120202233927" resolver="local" artresolver="local" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="25">
 				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3192" time="0" location="/usr/local/play/framework/../repository/cache/com.jcraft/jsch/ivy-0.1.46.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/com.jcraft/jsch/0.1.46/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="0.1.46" rev-constraint-default="0.1.46" rev-constraint-dynamic="0.1.46" callerrev="0.12.2"/>
@@ -254,7 +254,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.ivy" name="ivy">
-			<revision name="2.3.0-rc1" status="release" pubdate="20120430185937" resolver="local" artresolver="local" homepage="http://ant.apache.org/ivy/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="24">
+			<revision name="2.3.0-rc1" status="release" pubdate="20120501155937" resolver="local" artresolver="local" homepage="http://ant.apache.org/ivy/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="24">
 				<metadata-artifact status="no" details="" size="4767" time="0" location="/usr/local/play/framework/../repository/cache/org.apache.ivy/ivy/ivy-2.3.0-rc1.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/org.apache.ivy/ivy/2.3.0-rc1/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="2.3.0-rc1" rev-constraint-default="2.3.0-rc1" rev-constraint-dynamic="2.3.0-rc1" callerrev="0.12.2"/>
 				<artifacts>
@@ -298,7 +298,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-tools.sbinary" name="sbinary_2.9.0">
-			<revision name="0.4.0" status="release" pubdate="20110517130638" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="20">
+			<revision name="0.4.0" status="release" pubdate="20110518100638" resolver="local" artresolver="local" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="20">
 				<metadata-artifact status="no" details="" size="2359" time="0" location="/usr/local/play/framework/../repository/cache/org.scala-tools.sbinary/sbinary_2.9.0/ivy-0.4.0.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/org.scala-tools.sbinary/sbinary_2.9.0/0.4.0/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="cache" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.12.2"/>
 				<caller organisation="org.scala-sbt" name="persist" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.12.2"/>
@@ -395,7 +395,7 @@
 			</revision>
 		</module>
 		<module organisation="jline" name="jline">
-			<revision name="1.0" status="release" pubdate="20111027145303" resolver="local" artresolver="local" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="12">
+			<revision name="1.0" status="release" pubdate="20111028125303" resolver="local" artresolver="local" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="12">
 				<license name="BSD" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3455" time="0" location="/usr/local/play/framework/../repository/cache/jline/jline/ivy-1.0.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/jline/jline/1.0/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="precompiled-2_10_0" conf="compile" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.12.2"/>
@@ -465,7 +465,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-compiler">
-			<revision name="2.9.2" status="release" pubdate="20120413013159" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="9">
+			<revision name="2.9.2" status="release" pubdate="20120413223159" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="9">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
 				<metadata-artifact status="no" details="" size="2654" time="0" location="/usr/local/play/framework/../repository/cache/org.scala-lang/scala-compiler/ivy-2.9.2.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/org.scala-lang/scala-compiler/2.9.2/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="classpath" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.12.2"/>
@@ -525,7 +525,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.9.2" status="release" pubdate="20120413012921" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="5">
+			<revision name="2.9.2" status="release" pubdate="20120413222921" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="5">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
 				<metadata-artifact status="no" details="" size="2380" time="0" location="/usr/local/play/framework/../repository/cache/org.scala-lang/scala-library/ivy-2.9.2.xml" searched="false" origin-is-local="true" origin-location="/usr/local/play/repository/local/org.scala-lang/scala-library/2.9.2/ivys/ivy.xml"/>
 				<caller organisation="org.scala-sbt" name="command" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.12.2"/>
