@@ -21,7 +21,7 @@ case class Question(
   username: Option[String],
   password: Option[String]) {
 
-  def addData : JSONObject = {
+  def addData: JSONObject = {
     DB.withConnection { implicit c =>
       val qid: Option[Long] = SQL("""
           INSERT INTO
@@ -31,8 +31,8 @@ case class Question(
         on('title -> this.title, 'text -> this.text, 'choice1 -> this.choice1, 'choice2 -> this.choice2, 'choice3 -> this.choice3, 'choice4 -> this.choice4, 'choice5 -> this.choice5, 'username -> this.username, 'password -> this.password).executeInsert()
 
       val json = JSONObject(immutable.Map(
-          "qid" -> qid.getOrElse()))
-        return json
+        "qid" -> qid.getOrElse()))
+      return json
     }
   }
 }
@@ -51,6 +51,19 @@ object Question {
       get[Option[String]]("password") map {
         case qid ~ title ~ text ~ choice1 ~ choice2 ~ choice3 ~ choice4 ~ choice5 ~ username ~ password => Question(qid, title, text, choice1, choice2, choice3, choice4, choice5, username, password)
       }
+  }
+
+  def checkQid(qid: Int): Boolean = {
+    var result = false
+    DB.withConnection { implicit c =>
+      val selectCount = SQL("""
+          SELECT count(*) as num FROM question WHERE qid = {qid}
+          """).on('qid -> qid).apply().head
+      if (selectCount[Long]("num") == 1) {
+        result = true
+      }
+    }
+    return result
   }
 
   def getByQid(qid: Int): JSONObject = {

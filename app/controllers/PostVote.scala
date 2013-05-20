@@ -7,9 +7,11 @@ import play.api.data.Forms._
 
 import models.Question
 import models.Vote
+import models.Message
 
 object PostVote extends Controller {
 
+  var resultMessage = ""
   // リクエストパラメータのqid,choice,usernameを取得
   val form = Form( tuple("qid" -> number, "choice" -> number, "username" -> optional(text)) )
 
@@ -29,10 +31,15 @@ object PostVote extends Controller {
     // インサート
     vote.addData
 
-    // 取得
-    val question = Question.getByQid(qid)
-
-    // ステータスコード
-    // http://www.playframework-ja.org/documentation/2.0.2/ScalaActions
-    Ok(question.toString())  }
+    // qid判定
+    val qidValidationResult = Question.checkQid(qid)
+    if (qidValidationResult == true) {
+      // 取得
+      val question = Question.getByQid(qid)
+      resultMessage = question.toString()
+    } else {
+      resultMessage = Message.warnMessage.toString()
+    }
+    Ok(resultMessage)
+    }
 }

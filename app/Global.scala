@@ -13,16 +13,16 @@ object Global extends GlobalSettings {
   }
   override def onError(request: RequestHeader, ex: Throwable) = {
     Logger.error("InternalServerError!")
-    InternalServerError("InternalServerError!!!")
+    InternalServerError("""{"status" : "error", "message" : "InternalServerError"}""")
   }
 
   override def onBadRequest(request: RequestHeader, error: String) = {
     Logger.error("Bad Request!")
-    BadRequest("Bad Request: " + error)
+    BadRequest("""{"status" : "error", "message" : "Bad Request. """ + error + """"}""")
   }
 
   override def onHandlerNotFound(request: RequestHeader): Result = {
     Logger.error("Not Found!")
-    NotFound("NotFound!!")
+    NotFound("""{"status" : "error", "message" : "NotFound"}""")
   }
 }
